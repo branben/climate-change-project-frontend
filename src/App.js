@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Home from "./Pages/Home";
+
+const apiUrl = "https://archive-api.open-meteo.com/v1/archive?latitude=40.71&longitude=-74.01&start_date=2022-01-01&end_date=2023-04-18&daily=weathercode,temperature_2m_mean,precipitation_sum,windspeed_10m_max,windgusts_10m_max&timezone=America%2FNew_York"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home apiUrl={apiUrl} />} />
+          </Routes>
+        </main>
+
+      </Router>
     </div>
   );
 }
+
 
 export default App;

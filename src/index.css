@@ -1,13 +1,158 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+nav {
+  display: flex;
+  justify-content: space-around;
+  background: #517e94;
+  padding: 1em;
+  margin-bottom: 2em;
+  font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav a {
+  text-decoration: none;
+  font-size: 2em;
+  color: white;
+}
+
+nav img {
+  height: 50px;
+}
+
+main {
+  margin-top: 1em;
+  text-align: center;
+}
+
+section,
+h2 {
+  margin-top: 1em;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+li {
+  font-size: 1em;
+}
+
+.locations {
+  background: ghostwhite;
+  padding: 1em;
+  min-height: 80vh;
+}
+
+.locations > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 0;
+}
+
+.locations ul > li {
+  background: lemonchiffon;
+  width: 26%;
+  padding: 2em;
+}
+
+.locations ul > li > ul {
+  margin-left: 0;
+  list-style: none;
+}
+
+.locations ul > li > ul li {
+  background: ghostwhite;
+  display: flex;
+  flex-wrap: no-wrap;
+  width: 90%;
+  justify-content: center;
+}
+
+.locations ul > li > ul li span {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+.details li {
+  list-style: none;
+  margin: 0.5em 0;
+  align-self: center;
+}
+
+.details li span:first-child {
+  font-weight: bold;
+}
+
+.people {
+  background: lemonchiffon;
+  height: 80vh;
+  padding-top: 1em;
+  text-align-last: center;
+}
+
+.people aside {
+  background: ghostwhite;
+  width: 80%;
+  min-height: 50%;
+  margin: auto;
+}
+
+.people aside h3 {
+  padding-top: 1em;
+}
+
+.people span,
+.movies span {
+  font-weight: bold;
+}
+
+.movies {
+  padding-top: 1em;
+  height: 80vh;
+  background: #d7f0f2;
+  text-align-last: center;
+}
+
+.movies aside {
+  background: aliceblue;
+  width: 90%;
+  margin: auto;
+  padding: 1em;
+}
+
+ul li::marker {
+  font-size: 150%;
+  color: #517e94;
+  opacity: 0;
+}
+
+.hero {
+  text-align: center;
+}
+
+.logo-side{
+  flex: auto;
+}
+
+.person {
+  display: grid;
+  text-align-last: center;
+}
+
+
+.info {
+  grid-template-rows: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.locations {
+  text-align-last: center;
+}
+
+.data {
+  background: ghostwhite;
+  padding: 1em;
+  min-height: 80vh;
 }
